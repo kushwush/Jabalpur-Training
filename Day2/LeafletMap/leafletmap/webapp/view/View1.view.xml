@@ -1,7 +1,11 @@
-<mvc:View controllerName="leafletmap.controller.View1"
+<mvc:View xmlns:vbm="sap.ui.vbm" controllerName="leafletmap.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+            <Panel id="map" width="100%" height="100%"/>
+                
+        </content>
+            
     </Page>
 </mvc:View>
