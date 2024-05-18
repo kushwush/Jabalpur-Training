@@ -15,7 +15,7 @@ sap.ui.define([
           { title: "Book 2", author: "Author 2", publishedDate: "2022-02-02" }
         ]
       });
-      this.getView().setModel(oModel);
+      this.getView().setModel(oModel, "bookModel");
       console.timeEnd("GoodExample")
     },
 

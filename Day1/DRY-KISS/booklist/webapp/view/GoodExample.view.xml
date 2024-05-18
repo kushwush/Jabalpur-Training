@@ -5,18 +5,53 @@
 >
     <List
         id="bookList"
-        items="{/books}"
+        items="{bookModel>/books}"
+        visible="{= ${device>/system/phone} ? false : true }"
     >
+        <!-- {(modelalias)>/books} -->
         <items>
             <CustomListItem>
                 <VBox>
-                    <Text text="{title}" />
-                    <Text text="{author}" />
+                    <Text text="{bookModel>title}" />
+                    <Text text="{bookModel>author}" />
                     <Text
-                        text="{path: 'publishedDate', formatter: '.formatDate'}"
+                        text="{path: 'bookModel>publishedDate', formatter: '.formatDate'}"
                     />
                 </VBox>
             </CustomListItem>
         </items>
     </List>
+    <Table
+        id="idProductsTable"
+        items="{productModel>/Products}"
+    >
+        <columns>
+            <Column>
+                <Text text="Product Name" />
+            </Column>
+            <Column>
+                <Text text="Product ID" />
+            </Column>
+            <Column>
+                <Text text="Product Price" />
+            </Column>
+            <Column>
+                <Text text="Price Status" />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <Text text="{productModel>ProductName}" />
+                    <Text text="{productModel>ProductID}" />
+                    <Text text="{productModel>ProductPrice}" />
+                        <ObjectStatus
+                        class="sapUiSmallMarginBottom"
+                        text="{productModel>ProductPrice}"
+                        icon="sap-icon://information"
+                        state="{= ${productModel>ProductPrice} > 1200 ? 'Success' : 'Error' }" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
 </mvc:View>
