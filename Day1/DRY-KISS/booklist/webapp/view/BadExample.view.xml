@@ -1,0 +1,13 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="booklist.controller.BadExample">
+    <List id="bookList" items="{/books}">
+        <items>
+            <CustomListItem>
+                <VBox>
+                    <Text text="{title}" />
+                    <Text text="{author}" />
+                    <Text text="{publishedDate}" />
+                </VBox>
+            </CustomListItem>
+        </items>
+    </List>
+</mvc:View>

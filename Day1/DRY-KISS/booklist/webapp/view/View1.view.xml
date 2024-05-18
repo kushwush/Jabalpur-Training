@@ -1,0 +1,14 @@
+<mvc:View controllerName="booklist.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showHeader="false">
+        <content>
+            <FlexBox height="100%" justifyContent="Center" alignItems="Center">
+                <Button text="{i18n>View1View.GoodExample}" type="Accept" press="onGoodExamplePress" 
+                    class="sapUiResponsiveMargin" />
+                <Button text="{i18n>View1View.BadExample}" type="Reject" press="onBadExamplePress"
+                    class="sapUiResponsiveMargin" />
+            </FlexBox>
+        </content>
+    </Page>
+</mvc:View>
