@@ -3,6 +3,15 @@
     xmlns="sap.m"
     controllerName="booklist.controller.GoodExample"
 >
+    <FlexBox
+    direction="Row"
+    >
+        <items>
+            <Label text="Book List" />
+            <Input value="{bookModel>/books/0/title}" editable="false" />
+            
+        </items>
+    </FlexBox>
     <List
         id="bookList"
         items="{bookModel>/books}"
