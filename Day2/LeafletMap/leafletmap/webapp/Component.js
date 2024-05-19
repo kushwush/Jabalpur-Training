@@ -29,6 +29,9 @@ sap.ui.define([
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+
+                // set geojson model
+                this.setModel(models.createSamparkKrantiPathModel(), "deltojbl");
             }
         });
     }
